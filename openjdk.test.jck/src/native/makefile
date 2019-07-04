@@ -297,11 +297,8 @@ $(LIBPREF)genrandom.$(LIBEXT):com_sun_management_mbeans_loading_RandomGen.c
 	$(RANDOMGEN)
 
 createdir:
-ifneq (win,$(findstring win,$(PLATFORM)))
 	mkdir -p $(FULLOUTDIR)
-else 
-	if not exist $(FULLOUTDIR) mkdir $(subst /,\,$(FULLOUTDIR))
-endif
+
 	
 installjmx:
 #ifneq (win,$(findstring win,$(PLATFORM)))
